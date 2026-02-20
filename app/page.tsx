@@ -65,7 +65,7 @@ export default function TimeConvert() {
         {/* <Header /> */}
         <div className="max-w-8xl mx-auto px-4 sm:px-6 pb-12 pt-2 sm:pt-6">
           <div className="flex flex-col lg:flex-row gap-8 xl:gap-12 lg:items-start">
-            <div className="w-full lg:w-[550px] xl:w-[650px] flex-shrink-0 lg:sticky lg:top-28 z-20 transition-all duration-300">
+            <div className="w-full lg:w-[450px] xl:w-[550px] flex-shrink-0 lg:sticky lg:top-28 z-20 transition-all duration-300">
               <TimeInputCard
                 currentTime={formatTime}
                 inputTime={inputTime}
