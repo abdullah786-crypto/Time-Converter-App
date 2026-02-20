@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Clock } from 'lucide-react';
+import { Clock } from "lucide-react";
 
 export default function Header() {
   return (

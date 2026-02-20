@@ -1,4 +1,4 @@
-import { Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin, RotateCcw } from "lucide-react";
 import { motion } from "motion/react";
 
 interface TimeInputCardProps {
@@ -7,7 +7,11 @@ interface TimeInputCardProps {
   setInputTime: (value: string) => void;
 }
 
-export default function TimeInputCard({ currentTime, inputTime, setInputTime }: TimeInputCardProps) {
+export default function TimeInputCard({
+  currentTime,
+  inputTime,
+  setInputTime,
+}: TimeInputCardProps) {
   const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputTime(e.target.value);
   };
@@ -17,7 +21,6 @@ export default function TimeInputCard({ currentTime, inputTime, setInputTime }: 
   };
 
   const formateSelectedTime = (dateString: string) => {
-
     if (!dateString) return "";
     const date = new Date(dateString);
     return date.toLocaleDateString("en-US", {
@@ -27,10 +30,12 @@ export default function TimeInputCard({ currentTime, inputTime, setInputTime }: 
       month: "short",
       day: "2-digit",
       year: "numeric",
-    })
-   }
+    });
+  };
 
-   const [date, year, timeStr] = formateSelectedTime(inputTime || currentTime).split(", ");
+  const [date, year, timeStr] = formateSelectedTime(
+    inputTime || currentTime,
+  ).split(", ");
 
   return (
     <>
@@ -44,22 +49,18 @@ export default function TimeInputCard({ currentTime, inputTime, setInputTime }: 
 
         <div className="relative z-10">
           <div className="inline-flex justify-center items-center gap-2 px-3 py-0 rounded-full bg-indigo-50 text-indigo-600 text-xs font-bold uppercase tracking-wider mb-6">
-          <MapPin className="size-4 text-indigo-500 mb-4 mt-4" />
-            Local Time  
+            <MapPin className="size-4 text-indigo-500 mb-4 mt-4" />
+            Local Time
           </div>
 
           <div className="space-y-1">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tighter">
-                {timeStr}
-              {/* {formateSelectedTime(inputTime) || formateSelectedTime(currentTime)} */}
+              {timeStr}
             </h2>
             <p className="text-2xl md:text-3xl text-slate-500 font-medium">
-             {/* Date is: {currentDate} */}
-              {date + ", " + year}  
+              {date + ", " + year}
             </p>
-            <p className="text-lg text-slate-400 font-medium">
-              {/* {format(selectedDate, "yyyy")} */}
-            </p>
+            <p className="text-lg text-slate-400 font-medium"></p>
           </div>
         </div>
 
@@ -71,7 +72,7 @@ export default function TimeInputCard({ currentTime, inputTime, setInputTime }: 
             <div className="relative overflow-hidden rounded-2xl bg-white shadow-sm border border-slate-200 group-hover:border-indigo-300 transition-all duration-300 ring-offset-2 focus-within:ring-2 ring-indigo-500/20">
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-hover:text-indigo-500 transition-colors">
                 <Calendar className="size-5" />
-              </div>  
+              </div>
               <input
                 type="datetime-local"
                 value={inputTime}
@@ -85,7 +86,7 @@ export default function TimeInputCard({ currentTime, inputTime, setInputTime }: 
             onClick={onSetToNow}
             className="flex items-center justify-center gap-2 w-full py-4 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold transition-all shadow-lg shadow-indigo-500/20 active:scale-[0.98]"
           >
-            {/* <RotateCcw className="size-4" /> */}
+            <RotateCcw className="size-4" />
             Reset to Current Time
           </button>
         </div>

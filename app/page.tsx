@@ -1,8 +1,7 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import TimeInputCard from "./components/timeInputCard";
-import Header from "./components/header";
 import { TimezoneCard } from "./components/timeZoneCard";
 
 export default function TimeConvert() {
@@ -91,40 +90,5 @@ export default function TimeConvert() {
         </div>
       </div>
     </>
-    // <div className="h-full w-full ">
-    //   <div className="h-auto p-[40px] w-full">
-    //     <h1 className="ml-[50px] mr-[50px] text-2xl md:text-3xl font-bold tracking-tight text-slate-900">
-    //       Time Converter
-    //     </h1>
-    //     <span className="ml-[50px] mr-[50px] text-xs md:text-sm font-medium text-[#5F738F]">Global Zone Synchronizer</span>
-    //     <br />
-    //   </div>
-    //   <div className="p-20 flex flex-row gap-20">
-    //     <div className="flex h-auto w-auto justify-center items-center content-center text-center self-center flex-col gap-2">
-    //       <div className="lg:w-[600px] xl:w-[700px] h-auto bg-dark-500">
-    //         <label className="text-[18px] font-bold">Input time here {inputTime}</label>
-    //         <input
-    //           className="p-[5px] text-[16px] w-[500px] h-[50px] border-2 border-gray-400 text-gray-700 rounded-md"
-    //           type="datetime-local"
-    //           value={inputTime}
-    //           onChange={(e) => setInputTime(e.target.value)}
-    //         />
-    //         {!inputTime && (
-    //           <p className="text-[20px] mt-10 color-grey-600">
-    //             Current time is: {currentTime.toLocaleTimeString("en-US")}
-    //           </p>
-    //         )}
-    //       </div>
-    //     </div>
-
-    //     <div className="flex flex-row h-auto gap-20 w-auto justify-center items-center content-center text-center self-center flex-wrap">
-    //       {timeZones.map((tz: { id: string; name: string }, index: number) => (
-    //         <div key={index+1} className="pt-[10px] flex flex-col gap-10 mb-[10px] text-18px h-[100px] w-[250px]">
-    //           <strong className="text-[30px]">{tz.name}:</strong> <p className="">{time[index]}</p>
-    //         </div>
-    //       ))}
-    //     </div>
-    //   </div>
-    // </div>
   );
 }

@@ -11,8 +11,6 @@ export function TimezoneCard({ timeZone, time, cardColors }: any) {
     setDate(date);
     setYear(year);
     setTimeStr(timeStr);
-    console.log("time is", timeStr);
-    console.log("date is", date);
   }, [time]);
 
   return (
@@ -41,32 +39,6 @@ export function TimezoneCard({ timeZone, time, cardColors }: any) {
               </div>
             </div>
           </div>
-
-          {/* <div className=""> */}
-          {/* <div> */}
-          {/* sdgs */}
-          {/* <h3 className={cn("text-xl font-bold tracking-tight")}>{"city"}</h3> */}
-          {/* <p className={cn("text-sm font-medium opacity-70", )}>{"country"}</p> */}
-          {/* </div> */}
-          {/* <div className="rounded-full px-3 py-1 text-xs font-bold border backdrop-blur-md bg-white/20 border-white/30 uppercase tracking-wider"> */}
-          {/* {offsetStr} */}
-          {/* sdgsfg */}
-          {/* </div> */}
-          {/* </div> */}
-
-          {/* <div className="z-10 relative mt-auto">
-        <div className="flex items-baseline gap-1.5">
-          <span className={cn("text-5xl font-bold tracking-tighter", )}>{"timeStr"}</span>
-          <span className={cn("text-lg font-semibold opacity-60", )}>{"amPmStr"}</span>
-        </div> */}
-          {/* <div className={cn("flex items-center gap-2 mt-2 font-medium text-sm opacity-80", )}> */}
-          {/* {isNight ? <Moon className="size-4" strokeWidth={2.5} /> : <Sun className="size-4" strokeWidth={2.5} />}
-          {dateStr} */}
-          {/* </div>
-      </div> */}
-
-          {/* Decorative gradient blob */}
-          {/* <div className={cn("absolute -bottom-12 -right-12 size-48 rounded-full blur-3xl opacity-50 mix-blend-overlay pointer-events-none")} /> */}
         </motion.div>
       </div>
     </>
