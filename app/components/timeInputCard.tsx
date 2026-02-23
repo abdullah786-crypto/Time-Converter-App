@@ -38,6 +38,9 @@ export default function TimeInputCard({
     timeZone: selectedTimeZone,
   });
 
+  //  let [newDate, setNewDate] = useState();
+  // let [newTime, setNewTime] = useState("");
+
   const onSetToNow = () => {
     const now = new Date();
     const formattedNow = formatInTimeZone(
@@ -45,7 +48,7 @@ export default function TimeInputCard({
       "Asia/Karachi",
       "yyyy-MM-dd'T'HH:mm",
     );
-    setInputTime("");
+    setInputTime(formattedNow);
     setSelectedTimeZone("Asia/Karachi");
     setCurrentTime(formattedNow);
   };
@@ -95,6 +98,7 @@ export default function TimeInputCard({
           <MapPin className="size-4 text-indigo-500" />
           Local Time
         </div> */}
+
         <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
           {timePart ? convertTo12Hour(timePart) : timeStr}
         </h2>
