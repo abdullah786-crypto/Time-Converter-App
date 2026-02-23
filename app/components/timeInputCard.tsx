@@ -38,9 +38,6 @@ export default function TimeInputCard({
     timeZone: selectedTimeZone,
   });
 
-  //  let [newDate, setNewDate] = useState();
-  // let [newTime, setNewTime] = useState("");
-
   const onSetToNow = () => {
     const now = new Date();
     const formattedNow = formatInTimeZone(
