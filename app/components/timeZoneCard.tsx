@@ -1,15 +1,13 @@
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
-export function TimezoneCard({ timeZone, time, cardColors }: any) {
+export function TimezoneCard({ timeZone, time, cardColors, timeZones, setTimeZone, selectedTimeZone, setSelectedTimeZone}: any) {
   const [date, setDate] = useState("");
   const [timeStr, setTimeStr] = useState("");
-  const [year, setYear] = useState("");
-
+  
   useEffect(() => {
-    const [date, year, timeStr] = time.split(",");
+    const [date, timeStr] = time.split(",");
     setDate(date);
-    setYear(year);
     setTimeStr(timeStr);
   }, [time]);
 
@@ -35,7 +33,7 @@ export function TimezoneCard({ timeZone, time, cardColors }: any) {
                 {timeStr}
               </span>
               <div className="text-end text-slate-600 font-medium ">
-                {date + ", " + year}
+                {date }
               </div>
             </div>
           </div>
