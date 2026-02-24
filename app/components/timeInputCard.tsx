@@ -45,7 +45,7 @@ export default function TimeInputCard({
       "Asia/Karachi",
       "yyyy-MM-dd'T'HH:mm",
     );
-    setInputTime(formattedNow);
+    setInputTime( inputTime !== "" ? inputTime = formattedNow : "")
     setSelectedTimeZone("Asia/Karachi");
     setCurrentTime(formattedNow);
   };
